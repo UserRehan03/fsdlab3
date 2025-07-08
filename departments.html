@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Departments | CampusConnect</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <style>
+    .animate-fade-in-down {
+      animation: fadeInDown 1.2s cubic-bezier(0.4,0,0.2,1) both;
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 1.2s cubic-bezier(0.4,0,0.2,1) both;
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body class="bg-blue-50">
+
+<!-- Navbar -->
+<nav class="bg-blue-900 shadow-lg fixed top-0 w-full z-50" aria-label="Main Navigation">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center space-x-3">
+      <i class="fas fa-graduation-cap text-3xl text-yellow-400"></i>
+      <span class="text-2xl font-bold text-yellow-400">CampusConnect</span>
+    </div>
+    <div class="hidden md:flex space-x-8 text-lg font-medium">
+      <a href="index.html" class="flex items-center space-x-2 text-blue-100 hover:text-yellow-300 transition-colors" aria-label="Home"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html" class="flex items-center space-x-2 text-blue-100 hover:text-yellow-300 transition-colors" aria-label="About"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="departments.html" class="flex items-center space-x-2 text-blue-100 hover:text-yellow-300 transition-colors" aria-label="Departments"><i class="fas fa-building-columns"></i><span>Departments</span></a>
+      <a href="contactus.html" class="flex items-center space-x-2 hover:text-blue-600 transition-colors" aria-label="Contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </div>
+    <button id="menu-button" class="md:hidden text-2xl text-yellow-300" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-blue-800 border-t border-blue-700 text-blue-100">
+    <a href="index.html" class="block px-4 py-2 hover:bg-blue-700">Home</a>
+    <a href="about.html" class="block px-4 py-2 hover:bg-blue-700">About</a>
+    <a href="departments.html" class="block px-4 py-2 hover:bg-blue-700">Departments</a>
+    <a href="contactus.html" class="block px-4 py-2 hover:bg-blue-50 transition-colors">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative h-[80vh] flex items-center justify-center text-white" style="background-image: url('assets/images/hero.jpg'); background-size: cover; background-position: center; margin-top:64px;">
+  <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800/70 to-blue-900 opacity-90"></div>
+  <div class="relative z-10 text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white drop-shadow-lg animate-fade-in-down">Welcome to CampusConnect</h1>
+    <p class="text-lg md:text-2xl text-blue-100 mb-8 animate-fade-in-up">Your gateway to departments, mentors & opportunities</p>
+    <a href="#departments-section" class="inline-block bg-blue-500 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:bg-blue-600 transition transform hover:scale-105 text-lg animate-fade-in-up" aria-label="Explore Departments">
+      Explore Departments
+    </a>
+  </div>
+  <div class="absolute top-8 left-8 bg-blue-500 text-white px-4 py-1 rounded-full font-semibold text-sm shadow-lg">Admissions Open 2025</div>
+</section>
+
+<!-- Gallery -->
+<section class="py-20 max-w-7xl mx-auto bg-blue-50">
+  <h2 class="text-4xl font-bold mb-8 text-center text-blue-800">Campus Gallery</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <img src="assets/images/1.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 1">
+    <img src="assets/images/2.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 2">
+    <img src="assets/images/3.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 3">
+    <img src="assets/images/4.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 4">
+    <img src="assets/images/5.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 5">
+    <img src="assets/images/6.jpg" class="rounded shadow object-cover h-60 w-full hover:scale-105 transition" alt="Gallery 6">
+  </div>
+</section>
+
+<!-- Anthem -->
+<section class="py-12 text-center bg-gradient-to-r from-blue-100 to-blue-200">
+  <h2 class="text-3xl font-bold mb-4 text-blue-800">Campus Anthem</h2>
+  <audio controls preload="none" class="mx-auto">
+    <source src="assets/audio/campus-anthem.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <p class="text-blue-700 mt-4">A heartfelt instrumental capturing the spirit and unity of our campus community.</p>
+</section>
+
+<!-- Departments -->
+<section id="departments-section" class="py-16 bg-gradient-to-r from-blue-200 to-blue-100">
+  <h2 class="text-4xl font-bold text-center mb-8 text-blue-800">Our Departments</h2>
+  <div class="flex justify-center mb-8">
+    <button id="load-departments" class="bg-blue-700 text-white px-6 py-3 rounded shadow hover:bg-blue-800 transition text-lg flex items-center space-x-2" aria-label="Show Departments">
+      <i class="fas fa-building-columns"></i>
+      <span>Show Departments</span>
+    </button>
+  </div>
+  <div id="departments-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-12 bg-blue-900 text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-4">Ready to Join a Department?</h2>
+  <p class="text-blue-100 mb-6">Contact us for guidance or visit our admissions office to learn more about your future at CampusConnect.</p>
+  <a href="mailto:info@campusconnect.edu" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-8 py-4 rounded-full shadow-lg transition hover:scale-105 text-lg" aria-label="Contact Admissions">
+    <i class="fas fa-envelope mr-2"></i>Contact Admissions
+  </a>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 py-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 space-y-4 md:space-y-0">
+    <div class="text-blue-100 text-sm">
+      &copy; 2025 CampusConnect. All rights reserved.
+    </div>
+    <div class="flex space-x-4 text-yellow-300 text-xl">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-square hover:text-blue-300"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter-square hover:text-blue-300"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin hover:text-blue-300"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram-square hover:text-pink-400"></i></a>
+    </div>
+    <div class="flex flex-col md:flex-row md:space-x-6 text-blue-100 text-sm text-center md:text-left">
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="departments.html" class="hover:underline">Departments</a>
+      <a href="mailto:info@campusconnect.edu" class="hover:underline">info@campusconnect.edu</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Menu Script -->
+<script>
+  const menuBtn = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (menuBtn && mobileMenu) {
+    menuBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
+    };
+    document.addEventListener('click', function(event) {
+      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  }
+</script>
+
+<!-- Department Load Script -->
+<script>
+  document.getElementById("load-departments").addEventListener("click", () => {
+    fetch("assets/data/departments.json")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("departments-container");
+        container.innerHTML = "";
+        const colors = ["bg-blue-50", "bg-blue-100", "bg-blue-200"];
+        data.forEach((dept, i) => {
+          const card = document.createElement("div");
+          const colorClass = colors[i % colors.length];
+          card.className = `${colorClass} p-6 rounded-xl border border-blue-300 shadow hover:shadow-xl transition transform hover:scale-105 group relative overflow-hidden`;
+          card.innerHTML = `
+            <div class="absolute top-4 right-4 opacity-10 text-6xl pointer-events-none group-hover:opacity-20 transition"><i class="fas fa-building-columns"></i></div>
+            <h3 class="text-2xl font-bold mb-2 text-blue-800 flex items-center"><i class="fas fa-building-columns mr-2"></i>${dept.name}</h3>
+            <p class="text-blue-700 mb-3">${dept.description}</p>
+            <p class="text-blue-600 font-medium mb-2"><i class="fas fa-user-tie mr-1"></i> Head: ${dept.head}</p>
+            <a href="mailto:${dept.email}" class="inline-block mt-2 bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold shadow hover:bg-blue-800 transition" aria-label="Contact ${dept.name}">Contact</a>
+          `;
+          container.appendChild(card);
+        });
+      })
+      .catch(error => {
+        const container = document.getElementById("departments-container");
+        container.innerHTML = `<div class="col-span-full text-center text-red-600 font-semibold">Failed to load departments. Please try again later.</div>`;
+        console.error("Error loading departments:", error);
+      });
+  });
+</script>
+
+</body>
+</html>

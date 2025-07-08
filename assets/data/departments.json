@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Computer Science",
+    "head": "Dr. Anaya Verma",
+    "email": "anaya.verma@campusconnect.edu",
+    "phone": "+1-555-1010"
+  },
+  {
+    "name": "Mechanical Engineering",
+    "head": "Prof. Rohan Patel",
+    "email": "rohan.patel@campusconnect.edu",
+    "phone": "+1-555-2020"
+  },
+  {
+    "name": "Physics",
+    "head": "Dr. Salma Noor",
+    "email": "salma.noor@campusconnect.edu",
+    "phone": "+1-555-3030"
+  },
+  {
+    "name": "Literature",
+    "head": "Prof. Ethan Grey",
+    "email": "ethan.grey@campusconnect.edu",
+    "phone": "+1-555-4040"
+  },
+  {
+    "name": "Fine Arts",
+    "head": "Ms. Liya Sengupta",
+    "email": "liya.sengupta@campusconnect.edu",
+    "phone": "+1-555-5050"
+  },
+  {
+    "name": "Business Studies",
+    "head": "Dr. Harsh Sharma",
+    "email": "harsh.sharma@campusconnect.edu",
+    "phone": "+1-555-6060"
+  }
+]
